@@ -12,3 +12,72 @@
     Isolato & no & no & no \\
     \bottomrule
 \end{tabular}
+
+\subsection{Grandezze}
+\begin{itemize}
+    \item \textbf{Intensive}: non dipendono dall'estensione del sistema (temperatura, pressione, densità);
+    \item \textbf{Estensive}: dipendono dall'estensione del sistema (massa, volume);
+    \item \textbf{Estensive specifiche}: estensiva/estensiva ($v = \frac{V}{M}$).
+\end{itemize}
+
+\subsection{Legge di Duhem}
+In un sistema semplice monocomponente il numero di parametri intensivi o estensivi specifici
+necessari per descriverlo all'equilibrio è 2.
+
+
+\subsection{Regola di Gibbs}
+\[V = C + 2 - F\]
+
+\begin{tabular}{ll}
+    $V$ & numero di variabili intensive indipendenti \\
+    $C$ & numero di componenti \\
+    $F$ & numero di fasi \\
+\end{tabular}
+
+Ne deriva l'esistena di una legge di stato:
+\[f(P, v, T) = 0\]
+
+\subsection{Trasformazioni termodinamiche}
+\begin{tabular}{p{3.1cm}p{4cm}}
+    \toprule
+    Trasformazione & Caratteristiche \\
+    \midrule
+    Quasi-statica o \newline internamente reversibile & Costituita da una successione di stati di equilibrio; può non essere reversibile \\
+    Reversibile & Se percorsa in senso inverso, riporta sistema e ambiente nello stato iniziale \\
+    Irreversibile & Non è rappresentabile su un diagramma di stato \\
+    Chiusa o ciclica & Gli estremi della trasformazione coincidono \\
+    Elementare & Se una delle grandezze di stato si mantiene costante durante la trasformazione \\
+    \bottomrule
+\end{tabular}
+
+\subsection{Gas ideali}
+Un gas può essere considerato ideale per pressioni minori di $\si{10\bar}$.
+
+\[PV = nRT\]
+\begin{tabular}{ll}
+    $P$ & pressione $[\si{\pascal}]$ \\
+    $V$ & volume $[\si{m^3}]$ \\
+    $n$ & numero di moli $[\si{\mol}]$ \\
+    $R$ & costante universale dei gas ideali $\SI{8314}{\J/k\mol.\K}$ \\
+    $T$ & temperatura $[\si{\K}]$
+\end{tabular}
+
+\[Pv = \frac{R}{M_m}T = R^*T \]
+\begin{tabular}{ll}
+    $M_m$ & massa molecolare \\
+\end{tabular}
+
+\subsection{Gas reali}
+Equazione di van der Waals:
+\[\left(P + \frac{a}{v_m^2}\right)(v_m-b) = RT\]
+
+\subsection{Liquidi e solidi}
+\begin{align*}
+    \dd{v} &= \left(\pdv{v}{T}\right)_P \dd{T} + \left(\pdv{v}{P}\right)_T \dd{P} \\
+    \dd{v} &= \beta v \dd{T} - K_T v \dd{P}
+\end{align*}
+
+\begin{align*}
+    \beta = \frac{1}{v} \left(\pdv{v}{T}\right)_P & \quad \text{coeff. di dilatazione termica isobaro} \\
+    K_T = -\frac{1}{v} \left(\pdv{v}{P}\right)_T & \quad \text{coeff. di dilatazione termica isotermo} \\
+\end{align*}
