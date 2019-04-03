@@ -1,0 +1,40 @@
+\subsection{Macchina termodinamica}
+La macchina termodinamica è un sistema termodinamico composto ed isolato che nel caso più semplice è realizzato da
+\begin{itemize}
+\item due serbatoi di calore
+\item un serbatoio di lavoro
+\item una macchina ciclica che è in grado di interagire con continuità con i serbatoi di calore e lavoro
+\end{itemize}
+
+\begin{description}
+\item[Serbatoio di calore]
+sistema termodinamico che scambia solo calore con l'esterno senza alterare il suo stato interno;
+gli scambi avvengono con trasformazioni quasi-statiche internamente reversibili.
+\item[Serbatoio di lavoro]
+sistema termodinamico che scambia solo lavoro con l'esterno senza alterare il suo stato interno;
+gli scambi avvengono con trasformazioni quasi-statiche internamente reversibili.
+\end{description}
+
+\textbf{Risoluzione problemi macchine termiche}\\
+Bisogna impostare e risolvere il sistema contente le equazioni di bilancio
+\[
+    \begin{cases}
+    \Delta U_Z = 0 \\
+    \Delta S_Z = S_{irr}
+    \end{cases}
+\]
+
+{\renewcommand{\arraystretch}{1.5}
+\subsection{Rendimenti macchine termiche}
+\begin{tabular}{p{4cm}c}
+\textbf{Macchina motrice} & $\eta = \frac{L}{Q_C}$ \\
+→ con serbatoi a massa infinita & $\eta = 1 - \frac{T_F}{T_C} - \frac{T_F}{Q_C}S_{irr}$ \\
+\phantom{→}→ reversibile ($S_{irr} = 0$) & $\eta = 1 - \frac{T_F}{T_C}$ \\
+\\
+\textbf{Macchina operatrice} & (serbatoi a temp. cost.) \\
+→ frigorifera & $\epsilon_f = \frac{Q_F}{L}$ \\
+\phantom{→}→ reversibile & $\epsilon_{f,rev} = \frac{T_F}{T_C - T_F}$ \\
+→ pompa di calore & $\epsilon_{pdc} = \frac{Q_C}{L}$ \\
+\phantom{→}→ reversibile & $\epsilon_{pdc,rev} = \frac{T_C}{T_C - T_F}$ \\
+\end{tabular}
+}
