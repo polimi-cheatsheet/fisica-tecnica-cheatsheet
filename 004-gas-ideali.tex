@@ -18,3 +18,71 @@ Quindi anche l'entalpia, $c_v$ e $c_P$ sono dipendenti solo dalla temperatura e 
     Gas Poliatomico non lineare & $\frac{6}{2}R^*$ & $\frac{8}{2}R^*$ \\
     \bottomrule
 \end{tabular}}
+
+\begin{tabular}{ll}
+    Monoatomico & \ch{El}, \ch{Ar}, $\ldots$ \\
+    Biatomico & \ch{O2}, \ch{N2}, \ch{H2}, \ch{CO2}, $\ldots$ \\
+    Poliatomico & \ch{CH4}, \ch{H2O}, $\ldots$ \\
+\end{tabular}
+
+Liquido incomprimibile ideale $C_v = C_P = c(T)$.
+
+Liquido incomprimibile perfetto $C_v = C_P = \text{cost}$.
+
+
+\subsection{Politropiche}
+Data una trasformazione quasi statica per un sistema con un \textbf{gas ideale}.
+
+\[
+    Pv^n = \text{cost} \quad Tv^{n-1} = \text{cost} \quad \frac{T^n}{P^{n-1}} = \text{cost} \quad PT^{\frac{n}{n-1}} = \text{cost}
+\]
+
+\begin{tabular}{lcc}
+    \toprule
+    Trasformazione & $c_x$ & $n = \frac{c_x-c_P}{c_x-c_v}$ \\
+    \midrule
+    Isoterma & $\pm\infty$ & 1 \\
+    Isocora & $c_v$ & $\pm\infty$ \\
+    Isobara & $c_P$ & 0 \\
+    Adiabatica & 0 & $k = \frac{c_p}{c_v}$ \\
+    \bottomrule
+\end{tabular}
+
+\subsection{Diagramma T-s}
+
+L'area sottesa dalla curva in una trasformazione \emph{internamente reversibile} è uguale al calore scambiato:
+\[ \dd{S}_{rev} = \frac{\dd{Q}_{rev}}{T} \qquad Q_{rev} = \int_i^f \dd{Q}_{rev} = \int_i^f T(S) \dd{S} \]
+
+Nel piano T-s tutte le trasformazioni politropiche sono esponenziali:
+\[T = T_0 e ^ { \frac{s-s_0}{c_x} }\]
+
+\begin{tabular}{lll}
+    Isoterme & $c_x = \infty$ & rette orizzontali \\
+    Adiabatiche reversibili & $c_x = 0$ & rette verticale \\
+    Isocore & $c_v < c_P$ & più ripide delle isobare \\
+\end{tabular}
+
+\textbf{Per i gas perfetti}
+\begin{tabular}{lll}
+    \toprule
+    Trasformazione & $l=\int P\dd{v}$ & $q = \int \dd{q}$ \\
+    \midrule
+    $P = \text{cost}$ & $P = \Delta v$ & $c_p\Delta T$ \\
+    $v = \text{cost}$ & 0 & $c_v\Delta T$ \\
+    $T = \text{cost}$ & $R^*T\ln{\frac{v_2}{v_1}}$ & $R^*T\ln{\frac{v_2}{v_1}}$ \\
+    & $-R^*T\ln{\frac{P_2}{P_1}}$ & $-R^*T\ln{\frac{P_2}{P_1}}$ \\
+    $\dd{Q}=0$ & $-c_v\Delta T$ & 0 \\
+    $c_x = \text{cost}$ & $(c_x-c_v)\Delta T$ & $c_x\Delta T$ \\
+    \bottomrule
+\end{tabular}
+
+\textbf{Per i gas perfetti}
+\[ \Delta u = c_v \Delta T \qquad \Delta h = c_p \Delta T \]
+\begin{align*}
+    \Delta s &= c_v \ln{\frac{T_2}{T_1}} + R^*\ln{\frac{v_2}{v_1}} \\
+    &= c_p \ln{\frac{T_2}{T_1}} - R^*\ln{\frac{P_2}{P_1}} \\
+    &= c_p \ln{\frac{v_2}{v_1}} + R^*\ln{\frac{P_2}{P_1}} \\
+\end{align*}
+
+\textbf{Per i liquidi incomprimibili}
+\[ \Delta u = c \Delta T \qquad \Delta s = c \ln{\frac{T_2}{T_1}} \]
