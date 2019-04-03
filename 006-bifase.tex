@@ -1,0 +1,54 @@
+\section{Sistemi bifase}
+
+Le grandezze estensive specifiche sono la media pesata sulle masse:
+\[m = m_\alpha + m_\beta \qquad E = E_\alpha + E_\beta\]
+\[e = \frac{m_\alpha}{m}e_\alpha + \frac{m_\beta}{m}e_\beta\]
+\[\text{frazione massica:} \quad x_\alpha = \frac{m_\alpha}{m} \quad x_\beta = \frac{m_\beta}{m} \]
+
+Dalla regola di Gibbs il numero di variabili intensive indipendenti per bifase monocomponente è 1, pressione e temperatura non sono indipendenti.
+
+La transizione di fase è a P costante: $\dd{h} = \delta q$.
+
+\subsection{Stati di aggregazione}
+\begin{tabular}{p{2.7cm}p{4.5cm}}
+    Liq. sottoraffreddato & Non in procinto di evaporare \\
+    Liq. saturo & In procinto di evaporare \\
+    Vapore umido & Stato di transizione \\
+    Vapore saturo & In procinto di condensazione \\
+    Vapore surriscaldato & Non in procinto di condensazione \\
+\end{tabular}
+
+\subsection{Entalpia di transizione}
+
+\[ h_\text{solido} < h_\text{liquido} < h_\text{vapore} \]
+
+Per l'acqua allo stato triplo:
+\begin{tabular}{ll}
+    Solidificazione & $h_{lst,\ch{H2O}} = \SI{-333}{kJ/Kg}$ \\
+    Evaporazione & $h_{lvt,\ch{H2O}} = \SI{2501.6}{kJ/Kg}$
+\end{tabular}
+
+\subsection{Titolo di vapore, liquido e solido}
+\[ x = x_v = \frac{m_v}{m} \quad x_l = \frac{m_l}{m} \quad x_s = \frac{m_s}{m} \]
+\[ x_v + x_l + x_s = 1 \]
+
+Per interpolare nelle tabelle:
+\[ \frac{X-X_1}{X_2-X_1} = \frac{T-T_1}{T_2-T_1} \]
+\[ Y = Y_1 + \frac{Y_2-Y_1}{X_2-X_1}(X-X_1) \]
+
+\subsection{Approssimazioni per entropia e entalpie di solidi e liquidi}
+
+Formule valide per l'acqua, partendo da uno stato di riferimento, per esempio il punto triplo.
+
+Allo stato solido:
+\[ h = h_0 + h_{lst} + c_s(T-T_0) + v(P-P_0) \]
+\[ s = s_0 + s_{lst} + c_s\ln{\frac{T}{T_0}} = s_0 + \frac{h_{lst}}{T_0} + c_s\ln{\frac{T}{T_0}} \]
+
+Allo stato liquido:
+\[ h = h_0 + c_l(T-T_0) + v(P-P_0) \]
+\[ s = s_0 + c_l\ln{\frac{T}{T_0}} \]
+
+Con le tabelle è possibile trovare $h$ per l'acqua sottoraffreddata:
+\[ h = h_{ls}(P_{sat}(T)) + v(P-P_{sat}(T)) \]
+
+dove $v = v_{ls}(P_{sat}(T))$. Di solito il termine $v\Delta P$ è trascurabile.

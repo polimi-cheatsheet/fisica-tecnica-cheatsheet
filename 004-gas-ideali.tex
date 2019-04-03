@@ -9,6 +9,8 @@ Quindi anche l'entalpia, $c_v$ e $c_P$ sono dipendenti solo dalla temperatura e 
 \subsection{Relazione di Mayer}
 \[ c_P = \dv{h}{T} = \frac{\dd{u} + \dd{\qty(Pv)}}{\dd{T}} = \qty(\dv{u}{T}) + \dv{R^*T}{T} = c_v + R^* \]
 
+Per i gas \textbf{perfetti} (gas ideali per variazioni di temperatura non troppo elevate) vale che:
+
 {\renewcommand\arraystretch{1.4}
 \begin{tabular}{lcc}
     \toprule
@@ -21,8 +23,8 @@ Quindi anche l'entalpia, $c_v$ e $c_P$ sono dipendenti solo dalla temperatura e 
 
 \begin{tabular}{ll}
     Monoatomico & \ch{El}, \ch{Ar}, $\ldots$ \\
-    Biatomico & \ch{O2}, \ch{N2}, \ch{H2}, \ch{CO2}, $\ldots$ \\
-    Poliatomico & \ch{CH4}, \ch{H2O}, $\ldots$ \\
+    Linare & \ch{O2}, \ch{N2}, \ch{H2}, \ch{CO2}, $\ldots$ \\
+    Non lineare & \ch{CH4}, \ch{H2O}, $\ldots$ \\
 \end{tabular}
 
 Liquido incomprimibile ideale $C_v = C_P = c(T)$.
@@ -31,7 +33,7 @@ Liquido incomprimibile perfetto $C_v = C_P = \text{cost}$.
 
 
 \subsection{Politropiche}
-Data una trasformazione quasi statica per un sistema con un \textbf{gas ideale}.
+Data una trasformazione quasi statica per un sistema con un \textbf{gas ideale} dove $c_x = \text{cost}$.
 
 \[
     Pv^n = \text{cost} \quad Tv^{n-1} = \text{cost} \quad \frac{T^n}{P^{n-1}} = \text{cost} \quad PT^{\frac{n}{n-1}} = \text{cost}
@@ -47,6 +49,14 @@ Data una trasformazione quasi statica per un sistema con un \textbf{gas ideale}.
     Adiabatica & 0 & $k = \frac{c_p}{c_v}$ \\
     \bottomrule
 \end{tabular}
+
+Per $n \ne 1$ (isoterma) l'integrale del lavoro diventa:
+\begin{align*}
+    l^\shortrightarrow = \int_1^2 P\dd{v} &= \frac{P_1v_1}{n-1} \qty[1-\qty(\frac{v_1}{v_2})^{n-1}] \\
+    &= \frac{P_1v_1}{n-1} \qty[1-\qty(\frac{P_2}{P_1})^{\frac{n-1}{n}}]
+\end{align*}
+Per $n = 1$ l'integrale del lavoro diventa:
+\[ l^\shortrightarrow = \int_1^2 P\dd{v} = P_1v_1\ln{\frac{v_2}{v_1}} = P_1v_1\ln{\frac{P_1}{P_2}} \]
 
 \subsection{Diagramma T-s}
 
@@ -86,3 +96,9 @@ Nel piano T-s tutte le trasformazioni politropiche sono esponenziali:
 
 \textbf{Per i liquidi incomprimibili}
 \[ \Delta u = c \Delta T \qquad \Delta s = c \ln{\frac{T_2}{T_1}} \]
+
+Se ideali $c_p = c(T)$, $\beta = 0$ e $K_T = 0$:
+\[ \dd{h} = c(T)\dd{T} + v\dd{P} \qquad \dd{s} = c(T)\frac{\dd{T}}{T} \]
+
+Se perfetti:
+\[ \Delta h = c\Delta T + v \Delta P \]
