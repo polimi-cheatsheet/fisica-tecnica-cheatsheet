@@ -20,19 +20,35 @@ Bisogna impostare e risolvere il sistema contente le equazioni di bilancio
 \[
     \begin{cases}
     \Delta U_Z = 0 \\
-    \Delta S_Z = S_{irr}
+    \Delta S_Z = S_{irr} \\
+    \end{cases}
+\]
+
+Per macchina motrice con masse infinite:
+\[
+    \begin{cases}
+        -Q_C + Q_F + L = 0 \\
+        -\frac{Q_C}{T_C} + \frac{Q_F}{T_F} = S_{irr} \\
+    \end{cases}
+\]
+
+Per macchina operatrice con masse infinite:
+\[
+    \begin{cases}
+        Q_C - Q_F - L = 0 \\
+        \frac{Q_C}{T_C} - \frac{Q_F}{T_F} = S_{irr} \\
     \end{cases}
 \]
 
 \subsection{Rendimenti macchine termiche}
 {\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{p{4cm}c}
-\textbf{Macchina motrice} & $\eta = \frac{L}{Q_C}$ \\
+\textbf{Macchina motrice} & $\eta = \frac{L}{Q_C} \quad \eta_{II} = \frac{\eta}{\eta_{rev}} = \frac{L}{L_{rev}} $ \\
 → con serbatoi a massa infinita & $\eta = 1 - \frac{T_F}{T_C} - \frac{T_F}{Q_C}S_{irr}$ \\
-\phantom{→}$\put(3,2){\line(0,1){5}}\to$ reversibile ($S_{irr} = 0$) & $\eta = 1 - \frac{T_F}{T_C}$ \\
+\phantom{→}$\put(3,2){\line(0,1){5}}\to$ reversibile ($S_{irr} = 0$) & $\eta_{rev} = 1 - \frac{T_F}{T_C}$ \\
 \\
 \textbf{Macchina operatrice} & (serbatoi a temp. cost.) \\
-→ frigorifera & $\epsilon_f = \frac{Q_F}{L}$ \\
+→ frigorifera & $\epsilon_f = \frac{Q_F}{L} \quad \eta_{II} = \frac{\epsilon}{\epsilon_{rev}} = \frac{L_{rev}}{L}$ \\
 \phantom{→}$\put(3,2){\line(0,1){5}}\to$ reversibile & $\epsilon_{f,rev} = \frac{T_F}{T_C - T_F}$ \\
 → pompa di calore & $\epsilon_{pdc} = \frac{Q_C}{L}$ \\
 \phantom{→}$\put(3,2){\line(0,1){5}}\to$ reversibile & $\epsilon_{pdc,rev} = \frac{T_C}{T_C - T_F}$ \\
