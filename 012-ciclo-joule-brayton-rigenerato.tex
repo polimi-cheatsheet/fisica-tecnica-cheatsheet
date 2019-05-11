@@ -1,0 +1,17 @@
+\section{Ciclo Joule-Brayton con rigenerazione}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+    
+    \draw (1,1) node[below left] {1} -- (1,1.7) node[above left] {2} parabola (3,3) node[above right] {3} -- (3,2) node[right] {4};
+    \draw (1,1) parabola (3,2);
+    \draw[dashed] (1,1.7) -- (2.68,1.7) node[right] {4'};
+    \draw[dashed] (1.95,2) node[above left] {2'} -- (3,2);
+\end{tikzpicture}
+
+Il rendimento nel caso $T_2 = T_4$ è:
+\begin{align*}
+    \eta_{\text{rig}} &= \frac{\dot{L}}{\dot{Q}_c} = \frac{\dot{L}_T-\dot{L}_c}{\dot{Q}_c} = \frac{ (T_3-T_4) - (T_2-T_1) }{T_3-T_4} = \\
+        &= 1 - \frac{T_2-T_1}{T_3-T_4} = 1 - \frac{T_2}{T_3} = 1 - \frac{T_2T_1}{T_3T_1} = 1 - \frac{T_1}{T_3}r_p^{\frac{k-1}{k}}
+\end{align*}
