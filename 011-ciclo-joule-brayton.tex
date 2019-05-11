@@ -1,0 +1,56 @@
+\section{Ciclo Joule-Brayton}
+
+Ciclo simmetrico costituito da due \emph{isoentropiche} e due \emph{isobare}.
+
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+    
+    \draw (1,1) node[below left] {1} -- (1,1.7) node[above left] {2} parabola (3,3) node[above right] {3} -- (3,1.5) node[below] {4};
+    \draw (1,1) parabola (3,1.5);
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$v$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$P$}] (ymax);
+
+    \draw (3.5,1) node[below] {4} -- (1.5,1) node[below left] {1};
+    \draw (1.5,1) parabola (0.5,3) node[above left] {2};
+    \draw (2.5,3) parabola (0.5,3);
+    \draw (3.5,1) parabola (2.5,3) node[above right] {3};
+\end{tikzpicture}
+\end{minipage}
+
+Nell'ipotesi di \emph{gas perfetto} e \emph{ciclo ideale simmetrico}:
+\begin{align*}
+    \dot{Q}_c &= \dot{m} (h_3-h_2) & \qquad \dot{Q}_f &= \dot{m} (h_4 - h_1) \\
+    \dot{Q}_c &= \dot{m} c_p (T_3 - T_2) & \qquad \dot{Q}_f &= \dot{m} c_p (T_4 - T_1) \\
+\end{align*}
+
+Il rendimento termodinamico del ciclo vale:
+\[
+    \eta_{JB} = \frac{\dot{L}}{\dot{Q}_c} = 1 - \frac{\dot{Q}_f}{\dot{Q}_c} = 1 - \frac{T_4-T_1}{T_3-T_2} = 1 - \frac{T_1}{T_2}
+\]
+
+Definendo il rapporto di compressione: $r_p = \frac{P_2}{P_1}$
+
+\[
+    \eta_{JB} = 1 - \frac{1}{r_p^{\frac{k-1}{k}}}
+\]
+
+\begin{align*}
+    \min \eta ~\text{per}~ r_p = 1 \quad \max \eta ~\text{per}~ T_2 \sra T_3 \Rightarrow r_{p}^{\max{}} = \left(\frac{T_3}{T_1}\right)^\frac{k}{k-1}
+\end{align*}
+
+\subsection{Lavoro specifico per ciclo Joule-Brayton}
+\[
+    l = l_T - l_c = c_p (T_3 - T_4) - c_p (T_2 - T_1)
+\]
+Il lavoro massimo si ha in corrispondenza di:
+\[
+    r_p^{\text{opt}} = \left(\frac{T_3}{T_1}\right)^\frac{k}{2(k-1)} = \sqrt{r_p^{\max{}}} \qquad\text{e}\qquad T_4 = T_2 = \sqrt{T_1T_3}
+\]
