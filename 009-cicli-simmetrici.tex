@@ -1,0 +1,38 @@
+\section{Cicli simmetrici}
+
+Un ciclo formato da 4 politropiche, uguali a due a due.
+
+\begin{minipage}{.6\linewidth}
+    \begin{tikzpicture}[
+        thick,
+        >=stealth',
+        dot/.style = {
+        draw,
+        fill = white,
+        circle,
+        inner sep = 0pt,
+        minimum size = 4pt
+        }
+    ]
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (4,0) coordinate[label = {below:$v$}] (xmax);
+    \draw[->] (0,0) -- (0,4) coordinate[label = {left:$P$}] (ymax);
+
+    \draw (3.5,0.5) node[below right] {4} parabola (1.5,1) node[below left] {1};
+    \draw (1.5,1) parabola (0.5,3.5) node[above left] {2};
+    \draw (2.5,3) parabola (0.5,3.5);
+    \draw (3.5,0.5) parabola (2.5,3) node[above right] {3};
+
+    \draw (1.5,3.2) node[above] {$m$};
+    \draw (2,0.8) node[below] {$m$};
+    \draw (0.8,2) node[left] {$n$};
+    \draw (3.3,2) node[left] {$n$};
+    \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.35\linewidth}
+    \begin{align*}
+        v_1v_3 &= v_2v_4 \\
+        P_1P_3 &= P_2P_4 \\
+        T_1T_3 &= T_2T_4 \\
+    \end{align*}
+\end{minipage}
