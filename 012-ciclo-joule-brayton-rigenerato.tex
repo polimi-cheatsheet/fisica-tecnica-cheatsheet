@@ -1,4 +1,6 @@
 \section{Ciclo Joule-Brayton con rigenerazione}
+
+\begin{minipage}{.5\linewidth}
 \begin{tikzpicture}[thick,>=stealth']
     \coordinate (O) at (0,0);
     \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
@@ -9,6 +11,10 @@
     \draw[dashed] (1,1.7) -- (2.68,1.7) node[right] {4'};
     \draw[dashed] (1.95,2) node[above left] {2'} -- (3,2);
 \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+    Si può applicare se $T_2 \le T_4$
+\end{minipage}
 
 Il rendimento nel caso $T_2 = T_4$ è:
 \begin{align*}
