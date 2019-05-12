@@ -5,7 +5,7 @@
 *.out
 *.pdf
 *.dvi
-*.synctex.gz
+*.synctex*
 *.xwm
 *.fdb_latexmk
 *.fls

@@ -1,0 +1,23 @@
+\section{Ciclo Carnot a vapore}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+
+    \gaussiana{-1.2}{1.2}{0}{0.7}
+
+    \draw (1,1) node[below left] {1} -- (1,1.8) node[above left] {2} -- (2.42,1.8) node [above right] {3} -- (2.42,1) node [below right] {4} -- cycle;
+
+\end{tikzpicture}
+
+Vantaggi:
+\begin{itemize}
+    \item L'isobara nel bifase è anche isoterma (meno irreversibilità);
+    \item La transizione di fase aumenta l'energia specifica scambiata lungo le isoterme;
+\end{itemize}
+
+Svantaggi:
+\begin{itemize}
+    \item Compressione $1-2$ di un bifase difficile da realizzare e soggetta a molte irreversibilità;
+    \item L'espansione $3-4$ conviene se $x_4<0.9$.
+\end{itemize}

@@ -64,5 +64,26 @@
 % No idea, without this tikz gives a warning
 \pgfplotsset{compat=1.16}
 
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
 \newcommand{\sla}{\shortleftarrow}
 \newcommand{\sra}{\shortrightarrow}
+
+\newcommand{\gaussiana}[4]{
+	\begin{axis}[
+		hide axis,
+		axis lines=left,
+		xtick=\empty,
+		ytick=\empty,
+		every axis plot post/.append style={mark=none,domain=-1:1,samples=50,smooth},
+		xmin=#1,
+		xmax=#2,
+		ymin=#3,
+		ymax=#4,
+		width=5cm
+	]
+		\addplot[black] {gauss(0,0.6)};
+	\end{axis}
+}
