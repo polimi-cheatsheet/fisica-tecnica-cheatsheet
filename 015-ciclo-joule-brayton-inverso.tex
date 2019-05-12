@@ -1,0 +1,32 @@
+\section{Ciclo Joule-Brayton inverso}
+
+Ciclo frigorifero inverso costituito da due \emph{isoentropiche} e due \emph{isobare}.
+
+\begin{minipage}{.5\linewidth}
+    \begin{tikzpicture}[thick,>=stealth']
+        \coordinate (O) at (0,0);
+        \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+        \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+
+        \draw (1,1) node[below left] {1} -- (1,1.7) node[above left] {4} parabola (3,3) node[above right] {3} -- (3,1.5) node[below] {2};
+        \draw (1,1) parabola (3,1.5);
+    \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+    \begin{tikzpicture}[thick,>=stealth']
+        \coordinate (O) at (0,0);
+        \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$v$}] (xmax);
+        \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$P$}] (ymax);
+
+        \draw (3.5,1) node[below] {2} -- (1.5,1) node[below left] {1};
+        \draw (1.5,1) parabola (0.5,3) node[above left] {4};
+        \draw (2.5,3) parabola (0.5,3);
+        \draw (3.5,1) parabola (2.5,3) node[above right] {3};
+    \end{tikzpicture}
+\end{minipage}
+
+Se il ciclo è simmetrico:
+\[
+    \epsilon = \frac{\dot{Q}_f}{\dot{Q}_c-\dot{Q}_f} = \frac{T_2}{T_3-T_2} = \frac{T_1}{T_4-T_1} = \frac{1}{ r_p^{\frac{k-1}{k}} - 1 }
+\]
+Alta efficienza per $r_p \sra 1$.
