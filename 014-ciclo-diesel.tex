@@ -1,0 +1,36 @@
+\section{Ciclo Diesel}
+
+Ciclo \textbf{NON simmetrico} costituito da due \emph{isoentropiche}, una \emph{isobara} e una \emph{isocora}.
+Applicazioni: motore endotermico.
+
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+    
+    \draw (1,0.5) node[below left] {1} -- (1,1.25) node[above left] {2} parabola (3,3) node[above right] {3} -- (3,1.5) node[below] {4};
+    \draw (1,0.5) parabola (3,1.5);
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$v$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$P$}] (ymax);
+
+    \draw (2.75,0.75) node[below right] {1} [looseness=1.25,out=-180,in=-90] to (0.5,3) node[above left] {2} -- (1.25,3) node[above right] {3};
+    \draw (2.75,1.5) node[right] {4} [looseness=1.25,out=-180,in=-90] to (1.25,3);
+    \draw (2.75,0.75) -- (2.75,1.5);
+\end{tikzpicture}
+\end{minipage}
+
+Nell'ipotesi di \emph{gas perfetto} e \emph{ciclo ideale}:
+\[ \eta_{diesel} = \frac{L}{Q_C} = 1 - \frac{c_v (T_4-T_1)}{c_p (T_3-T_2)} = 1 - \frac{c_v T_1 (\frac{T_4}{T_1}-1)}{c_p T_2 (\frac{T_3}{T_2}-1)} \]
+
+\begin{align*}
+\text{Rapporto compressione volumetrico:} &\qquad r = \frac{V_1}{V_2} \\
+\text{Rapporto di combustione:} &\qquad z = \frac{V_3}{V_2} \\
+\end{align*}
+
+\[ \eta_{diesel} = 1 - \frac{1}{r^{k-1}} \frac{1}{k} \frac{z^k-1}{z-1} \]
