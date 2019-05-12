@@ -1,0 +1,45 @@
+\section{Ciclo Carnot}
+Il ciclo di Carnot è un ciclo simmetrico composto da due isoentropiche (adiabatiche reversibili) e due isoterme.
+
+Il rendimento ciclo di Carnot vale:
+\[ \eta = \frac{L}{Q_C} = 1 - \frac{Q_F}{Q_C} = 1 - \frac{T_1}{T_3} \]
+
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+    
+    \draw (1,1) node[below left] {1} -- (1,2.5) node[above left] {2} parabola (3,2.5) node[above right] {3} -- (3,1) node[below] {4};
+    \draw (1,1) parabola (3,1);
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$v$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$P$}] (ymax);
+
+    \draw (3,1) node[below] {4} parabola (1.25,1.35) node[below left] {1};
+    \draw (1.25,1.35) parabola (0.5,3) node[above left] {2};
+    \draw (2.25,2.25) parabola (0.5,3);
+    \draw (3,1) parabola (2.25,2.25) node[above right] {3};
+\end{tikzpicture}
+\end{minipage}
+
+\subsection{Irreversibilità}
+Se \textbf{irreversibilità esterna} ($T_1 > T_F$ e $T_2 < T_C$):
+\[ \eta_{rev} = 1 - \frac{T_F}{T_C} > \eta_{ciclo} = 1 - \frac{T_1}{T_3} \]
+Bilancio entropico su tutta macchina termica:
+\[ -\frac{Q_C}{T_C} + \frac{Q_F}{T_F} = S_{irr} \]
+Bilancio entropico su macchina ciclica (ciclo di Carnot):
+\[ \frac{Q_C}{T_3} = \frac{Q_F}{T_1} = \Delta S \]
+Da cui si ricava:
+\[ Q_C \qty(\frac{T_1}{T_F T_3} - \frac{1}{T_C}) = S_{irr} \]
+
+Se \textbf{irreversibilità interna} ($s_1 < s_2$ e $s_3 < s_4$):\\
+Bilancio entropico su tutta macchina termica:
+\[ -\frac{Q_C}{T_C} + \frac{Q_F}{T_F} = S_{irr} \]
+Bilancio entropico su macchina ciclica:
+\[ \frac{Q_C}{T_C} = S_3 - S_2 \qq{e} \frac{Q_F}{T_F} = S_4 - S_1 \]
+Da cui deriva: $S_2 - S_3 + S_4 - S_1 = S_{irr} > 0$
