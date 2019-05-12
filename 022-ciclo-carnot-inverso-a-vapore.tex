@@ -1,0 +1,15 @@
+\section{Ciclo Carnot inverso a vapore}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+
+    \gaussiana{-1.2}{1.2}{0}{0.7}
+
+    \draw (1,1) node[below left] {2} -- (1,1.8) node[above left] {1} -- (2.42,1.8) node [above right] {4} -- (2.42,1) node [below right] {3} -- cycle;
+\end{tikzpicture}
+
+\begin{itemize}
+    \item L'espansione $1-2$ non è problematica;
+    \item La compressione $3-4$ può condurre ad una elevata erosione del compressore;
+\end{itemize}

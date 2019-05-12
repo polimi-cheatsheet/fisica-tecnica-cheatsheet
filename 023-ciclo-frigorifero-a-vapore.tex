@@ -1,0 +1,26 @@
+\section{Ciclo frigorifero a vapore}
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$s$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$T$}] (ymax);
+
+    \gaussiana{-1.2}{1.2}{0}{0.7}
+
+    \draw (0.98,1.8) node[above left] {1} -- (2.42,1.8) node [below] {5} parabola (2.9,3) node[right] {4} -- (2.9,1) node [below] {3} -- (1.2,1);
+    \draw[dotted] (1.2,1) node[below] {2} parabola (0.98,1.8);
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\begin{tikzpicture}[thick,>=stealth']
+    \coordinate (O) at (0,0);
+    \draw[->] (0,0) -- (3.5,0) coordinate[label = {below:$h$}] (xmax);
+    \draw[->] (0,0) -- (0,3.5) coordinate[label = {left:$P$}] (ymax);
+
+    \draw [thin] plot [smooth, tension=1] coordinates {(0.6,0) (1,1.7) (2,2.6) (2.8,1.7) (2.2,0)};
+    \draw (1.15,2) node[above left] {1} -- (2.9,2) node[above] {5} -- (3.5,2) node[above] {4} -- (2.7,1) node[right] {3} -- (1.15,1) node[below] {2};
+    \draw [dotted] (1.15,1) -- (1.15,2);
+\end{tikzpicture}
+\end{minipage}
+
+L'espansione $1-2$ isoentropica è sostituita da un'espansione adiabatica isoentalpica (valvola di laminazione).
