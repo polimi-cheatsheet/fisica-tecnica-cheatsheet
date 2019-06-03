@@ -23,3 +23,59 @@ R_i & \quad \text{raggio interno isolante}
 \end{align*}
 Si ha che inizialmente $R_{tot}$ decresce all'aumentare dello spessore di isolante.
 Si ha $R_{tot}$ minimo quando $R_e = R_{critico} = \frac{k}{h}$.
+
+\subsection{Coefficiente convettivo}
+
+\begin{tabular}{p{5cm}r}
+    \toprule
+    Fluido & $h \quad \qty[\frac{W}{m^2K}]$ \\ \midrule
+    gas stagnante &  \numrange{5}{50} \\
+    acqua stagnante & $100$ \\
+    gas in moto & \numrange{50}{1000} \\
+    olio minerale & \numrange{50}{3000} \\
+    acqua in mto & \numrange{200}{10000} \\
+    acqua ebollizione/condensazione & \numrange{1000}{100000} \\
+    metalli liquidi & \numrange{10000}{100000} \\
+    \bottomrule
+\end{tabular}
+
+Il coefficiente convettivo non è una proprietà della materia e dipende da:
+\begin{align*}
+    \rho & \quad \text{densità} \\
+    \mu & \quad \text{viscosità} \\
+    c_p & \quad \text{cal. spec. pressione cost.} \\
+    k & \quad \text{conduttività} \\
+    w & \quad \text{velocità} \\
+    D & \quad \text{diametro equivalente} \\
+\end{align*}
+
+
+\subsection{Convezione forzata}
+\subsubsection{Numero di Nusselt}
+\[ \Nus = \frac{h D}{k} \qty( = \frac{h \Delta T}{\frac{k}{D} \Delta T})\] 
+Può essere interpretato come rapporto tra potenza termica scambiata per convezione e potenza termica scambiata per conduzione nelo strato limite.
+
+\subsubsection{Numero di Reynolds}
+\[ \Rey = \frac{\rho w D}{\mu} \qty( = \frac{F_{inerzia}}{F_{viscose}})\] 
+Può essere interpretato come rapporto tra la risultante delle forze di inerzia e la risultante delle forze viscose.
+
+\textbf{Valori tipici di Reynolds}\\
+\textit{Moto in un condotto:}\\
+\phantom{→}$\put(3,2){\line(0,1){5}}\to$ laminare se $\Rey < 2000$, turbolento se $\Rey > 2500$\\
+\textit{Moto lungo lastra piana:}\\
+\phantom{→}$\put(3,2){\line(0,1){5}}\to$ laminare se $\Rey < 5 \cdot 10^5$, turbolento se $\Rey > 5 \cdot 10^5$\\
+\textit{Moto attorno ad un cilindro:}\\
+\phantom{→}$\put(3,2){\line(0,1){5}}\to$ laminare se $\Rey < 2 \cdot 10^5$, turbolento se $\Rey > 2 \cdot 10^5$\\
+
+\subsubsection{Numero di Prandtl}
+\[ \Pra = \frac{c_p \mu}{k} \]
+Si ottiene dividendo $\nu = \frac{\mu}{\rho}$ (viscosità cinematica, $\nu$) per $\frac{k}{\rho c_p}$ (diffusività termica).
+
+\textbf{Valori tipici di Prandtl}\\
+\begin{tabular}{p{3cm}r}
+    \toprule
+    gas ideali & $0.7$\\
+    acqua & \numrange{2}{10}\\
+    metalli liquidi & \numrange{0.005}{0.03}\\
+    \bottomrule
+\end{tabular}

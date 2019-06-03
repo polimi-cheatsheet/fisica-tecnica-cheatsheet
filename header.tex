@@ -30,6 +30,9 @@
 \usepackage{stmaryrd}
 \usepackage{chemformula}
 
+% Ranges of numbers
+\sisetup{range-phrase=--}
+
 % This sets page margins to .5 inch if using letter paper, and to 1cm
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
@@ -70,6 +73,10 @@
 
 \newcommand{\sla}{\shortleftarrow}
 \newcommand{\sra}{\shortrightarrow}
+
+\DeclareMathOperator{\Nus}{Nu}
+\DeclareMathOperator{\Rey}{Re}
+\DeclareMathOperator{\Pra}{Pr}
 
 \newcommand{\gaussiana}[4]{
 	\begin{axis}[
