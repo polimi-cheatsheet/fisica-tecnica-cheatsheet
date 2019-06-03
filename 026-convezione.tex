@@ -1,0 +1,25 @@
+\section{Convezione}
+Trasferimento di energia tra una superficie solida e un fluido adiacente in movimento.
+\begin{description}
+ \item[Convezione forzata] Avviene quando il fluido è forzato a scorrere su una superficie da mezzi esterni
+ \item[Convezione naturale] Avviene quando il moto del fluido è causato da forze ascensionali che sono indotte dalle differenze di densità dovute alla variazione di temperatura del fluido in un campo gravitazionale
+\end{description}
+
+\subsection{Equazione generale}
+\[ \dot{q} = h \cdot \qty(T_s - T_f) \]
+\begin{align*}
+h & \quad \text{coefficiente convettivo} \\
+T_s & \quad \text{temperatura superficie} \\
+T_f & \quad \text{temperatura fluido} \\
+\end{align*}
+\[ \qq*{Ponendo} R_{conv} = \frac{1}{h \cdot A} \qq{si ha che} \dot{Q}_{conv} = -\frac{\Delta T}{R_{conv}} \]
+
+\subsection{Raggio critico di isolamento}
+Considerando gusci cilindrici aventi come utimo strato uno strato di isolante soggetto a fenomeni convettivi.
+\[ R_{tot} = R_{isol} + R_{conv} = \frac{\ln(\frac{R_e}{R_i})}{2\pi L k} + \frac{1}{2\pi R_e L h} \]
+\begin{align*}
+R_e & \quad \text{raggio esterno isolante} \\
+R_i & \quad \text{raggio interno isolante}
+\end{align*}
+Si ha che inizialmente $R_{tot}$ decresce all'aumentare dello spessore di isolante.
+Si ha $R_{tot}$ minimo quando $R_e = R_{critico} = \frac{k}{h}$.
