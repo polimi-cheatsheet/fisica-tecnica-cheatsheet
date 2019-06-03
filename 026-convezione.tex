@@ -79,3 +79,38 @@ Si ottiene dividendo $\nu = \frac{\mu}{\rho}$ (viscosità cinematica, $\nu$) per
     metalli liquidi & \numrange{0.005}{0.03}\\
     \bottomrule
 \end{tabular}
+
+\subsection{Temperature di valutazione dei parametri}
+\textbf{Corpo immerso}\\
+\[ T_{film} = \frac{T_p + T_\infty}{2} \qq{oppure} T_{\text{asintotica}} = T_\infty \]
+\textbf{Convenzione forzata in condotto}\\
+\[ \qq*{Temp. di miscelamento adiabatico} T_f = \frac{\int_A \rho w c_p T \dd{A}}{\int_A \rho w c_p \dd{A}} \]
+
+\subsection{Flusso all'interno di tubi}
+In ogni sezione $w$ varia da un valore pari a zero sulla parete fino ad un valore massimo sull'asse del tubo.
+In ogni sezione $T$ varia da un valore sulla parete fino ad un valore maggiore (o inferiore) sull'asse del tubo, a seconda se il processo sia di riscaldamento o raffreddamento.
+
+\textbf{Velocità media}\\
+La velocità media si ricava dal principio di conservazione della massa.
+\[ w_m = \frac{\dot{m}}{\rho A_t} \qq{con} A_t = \pi \frac{D^2}{4} \]
+
+\textbf{Temperatura media}\\
+La temperatura media si ricava dal principio di conservazione dell'energia.
+\[ \dot{E} = \dot{m} c_p T_m = \int_{\dot{m}} c_p T \partial \dot{m} = \int_{A_t} c_p T \qty(\rho w \dd{A_t}) \]
+
+\textbf{Condizioni al contorno}\\
+\[ T_s = \text{cost} \qq{oppure} \dot{q} = \text{cost} \]
+Le due condizioni non possono essere contemporaneamente presenti.
+
+\textbf{Flusso di calore costante}\\
+\[ \dot{q}_s = \text{cost} \rightarrow \dot{Q}_s = \dot{q}_s \cdot A = \dot{m} c_p \qty(T_u - T_i) \]
+Da cui deriva 
+\[ T_u = T_i + \frac{\dot{q}_s A}{\dot{m} c_p} \]
+Ma essendo $\dot{q}_s = h \qty(T_s - T_m)$
+\[ T_s = T_m + \frac{\dot{q}_s}{h} \]
+Nota come $T_m$ non è costante ma dipende dalla distanza dall'ingresso del tubo e si può calcolare usando l'equazione precedente che lega $T_u$ a $T_i$, considerando solo parte del tubo.
+
+\textbf{Temperatura superficiale costante}\\
+\[ \ln(\frac{T_s - T_u}{T_s - T_i}) = - \frac{h A}{\dot{m} c_p} \]
+Ma anche
+\[ \dot{Q} = h \cdot A \cdot \Delta T_{ln} \qq{con} \Delta T_{ln} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
