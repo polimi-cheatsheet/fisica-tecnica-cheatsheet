@@ -1,0 +1,21 @@
+sudo: required
+dist: xenial
+language: generic
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y --no-install-recommends texlive-full latexmk
+script:
+  - latexmk -pdf -xelatex -interaction=nonstopmode fisica-tecnica.tex || true
+before_deploy:
+  - git config --local user.name "Travis Builder"
+  - git config --local user.email "travis@travis.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d-%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "pVhs/n56Hkd36oS785wXxOuqMzKd1ktHyWB1qtuZMk85LFtqr62MOs07oAQUzf4Uj0qQXx4OHAztPQRVBipXPNVYdxsdx0wY+bTOMvsGBj8UsleRSVJFHGx8jUeQqqz0GLKmnvlpOVSe8n1MGZcbGRBFcONUTEjRJ3OP6icC3FTvNn0I8I/JjrsYK6Hq0zt04dBJJO+epwHBQz3ZaTKtNT14CPMkptJR5zcewBtpIRpYUkbRTqJa3AqakXsFW/QLKAlndibUtRDP/EntRax7VT0+CHLcPELb9cjrKauvqteLll7lQksYM1DNEZ+ARJG2Raek/QHTCEpZPPmnvcZg++B5EK2/C6ltzT2FixTfWYb5p19NFqJGYuMXalI6GaHAW1V/Ohj8ilZ2JsyEc0K1jMy1iQsyPU5ue5yZJ5E1ldJ9YEXZWTFQW6fW9BEtQlY9+mTkfExXpjp2cQdV4OI8LS8Vq4UKrPPtPlNEQ4N02n4iopjGA9mmr7fyysGSP08HTKfBnbu8vfK3D8rhsy36vcKVheS53/ACmjZkPqLylbEOfqwzwNXPVvE14hA7MpKZgiZhZWx+sf3dxXMGcl02pnKmrR86XuvWpehp/WgPf5X30QDaMBaOnyMkDY8QKLJfeRWcR9TCtL6d6hxAjV3HlfdgIL4u2J00z1cS2SRt8do="
+  file: fisica-tecnica.pdf
+  skip_cleanup: true
+  draft: true
