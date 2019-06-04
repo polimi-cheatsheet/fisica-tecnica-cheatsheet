@@ -1,0 +1,151 @@
+\section{Irraggiamento}
+
+Un \textbf{corpo nero} è un perfetto emettitore di radiazioni poiché emette la massima radiazione ad ogni temperatura e lunghezza d'onda e assorbe tutta la radiazione incidente indipendentemente da direzione e lunghezza d'onda.
+
+\[
+    \text{Potenza radiante del corpo nero} \qquad E^n = \sigma_0 T^4 [W/m^2]
+\]
+
+Dove $\sigma_0 = \SI{5.67e-8}{W/m^2K^4}$ è la costante di Stefan-Boltzmann.
+
+\subsection{Legge della distribuzione di Planck}
+Il potere emissivo monocromatico di un corpo nero rispetto la frequenza d'onda $\lambda$ segue la legge della distribuzione di Planck:
+\[
+    E^n_\lambda = \frac{C_1}{\lambda^5 (e^{\frac{C_2}{\lambda T}} - 1) }
+\]
+
+Con $C_1 = \SI{3.742}{W \mu m^4/m^2}$ e $C_2 = \SI{1.439e4}{\mu m / K}$.
+
+\subsection{Legge dello spostamento o di Wien}
+La legge che regola i picchi del potere emissivo di un corpo nero è la legge di Wien:
+\[
+    (\lambda T)_{\text{max pow}} = \SI{2897.8}{\mu m\cdot K}
+\]
+
+\subsection{Emissività}
+L'emissività è il rapporto tra la radiazione emessa e la radiazione emessa da un corpo nero alla stessa temperatura:
+\[
+    \epsilon(T) = \frac{E(T)}{E^n(T)} = \frac{E(T)}{\sigma_0T^4}
+\]
+
+Da cui $E(T) = \epsilon(T)\sigma_0T^4$. Per un corpo nero $\sigma = 1$.
+
+\subsection{Radiazione incidente}
+Quando della radiazione colpisce una superficie questa si divide in:
+
+\begin{tabular}{ll}
+    Assorbita & $\alpha = \frac{I_\text{assorb}}{I_\text{incid}}$ \\
+    Riflessa & $\rho = \frac{I_\text{riflessa}}{I_\text{incid}}$ \\
+    Trasmessa & $\tau = \frac{I_\text{trasmessa}}{I_\text{incid}}$ \\
+\end{tabular}
+
+Vale che $\alpha + \rho + \tau = 1$. Un corpo è \emph{opaco} se $\tau = 0$, \emph{trasparente} se $\tau = 1$, \emph{speculare} se $\rho = 1$.
+Il coefficiente di assorbimento dipende dalla temperatura della sorgente.
+
+La \textbf{legge di Kirchhoff} afferma che coefficiente di assorbimento e emissività tendono ad uguagliarsi quando la temperatura dell'emettitore è circa uguale a quella del ricevente (meno di $\SI{100}{K}$).
+
+\subsection{Fattore di vista}
+
+Il fattore di vista tra la superficie $i$ e la superficie $j$ si indica $F_{i\sra j}$ ed è la frazione della radiazione emessa da $i$ che incide direttamente su $j$.
+
+\begin{tabular}{ll}
+    $F_{i\sra j} = 0$ & $i$ e $j$ non sono in vista tra loro. \\
+    $F_{i\sra j} = 1$ & $j$ circonda completamente $i$.
+\end{tabular}
+
+\textbf{Regola di reciprocità}\\
+$F_{i\sra j} = F_{j\sra i}$ solo se le aree delle superfici sono uguali:
+\[
+    A_iF_{i\sra j} = A_jF_{j\sra i}
+\]
+
+\textbf{Regola della somma}\\
+Tutta la radiazione emessa da $i$ in una cavità deve essere intercettata dalle superfici di $j$.
+\[
+    \sum_{j=1}^n F_{i\sra j} = 1
+\]
+
+
+\subsection{Convenzioni adottate}
+
+\begin{tabular}{ll}
+    $J_1$ & potenza termica areica emessa da 1. \\
+    $J_{1\sra 2}$ & potenza termica areica emessa da 1 intercettata da 2. \\
+    $\dot{Q}_{1,2}$ & potenza termica netta scambiata tra 1 e 2. \\
+\end{tabular}
+
+\begin{equation*}
+    \begin{gathered}
+        J_{1\sra 2} = F_{1\sra 2}J_1 \\
+        \dot{Q}_{1,2} = \dot{Q}_{1\sra 2} - \dot{Q}_{2\sra 1} = -\dot{Q}_{2,1} \\
+        \dot{Q}_{1\sra 2} = A_1J_{1\sra 2} = A_1F_{1\sra 2}J_1
+    \end{gathered}
+\end{equation*}
+
+\subsection{Scambio termico tra superfici}
+
+\textbf{Superfici nere}\\
+\[
+    J_1 = E^n_1 = \sigma_0T_1^4 \qquad J_2 = E^n_2 = \sigma_0T_2^4
+\]
+\begin{align*}
+    \dot{Q}_{1,2} &= A_1F_{1\sra 2}E_1^n - A_2F_{2\sra 1}E_2^n \qquad [A_1F_{1\sra 2} = A_2F_{2\sra 1}] \\
+        &= A_1F_{1\sra 2} (E_1^n - E_2^n) = A_1F_{1\sra 2}\sigma_0(T_1^4 - T_2^4)
+\end{align*}
+
+Resistenza spaziale alla radiazione: $\frac{1}{A_1F_{1\sra 2}}$.
+
+\textbf{Superfici piane parallele, indefinite, nere}\\
+\[
+    F_{1\sra 2} = 1 \quad \Rightarrow \quad \dot{Q}_{1,2} = A_1\sigma_0(T_1^4 - T_2^4)
+\]
+
+\textbf{Corpo nero in una cavità con superfici nere}\\
+Il corpo intero è 1, il corpo attorno è 2.
+\[
+    F_{1\sra 2} = 1 \quad \Rightarrow \quad \dot{Q}_{1,2} = A_1\sigma_0(T_1^4 - T_2^4)
+\]
+Nota che $F_{2\sra 1} \ne 1$ perché parte della radiazione incide sulla cavità essendo concava.
+
+\subsection{Bilancio termico superficie grigia opaca}
+\[
+    J_i = E_i + \rho_iI_i = \epsilon_iE_i^n + (1-\epsilon_i)I_i
+\]
+Deve $I_i$ è la radiazione incidente su $i$, $\rho_i I_i$ è la radiazione riflessa.
+
+La potenza termica netta uscente è $\dot{Q} = A_i(J_i-I_i)$.
+
+\textbf{Superfici grigie}\\
+\[
+    \dot{Q}_1 = \dot{Q}_{1,2} = A_1(J_1-I_1) = A_1\left(J_1-\frac{J_1-\epsilon_1E_1^n}{1-\epsilon_1}\right)
+\]
+\[
+    \dot{Q}_{1,2} = \frac{E_1^n-J_1}{\frac{1-\epsilon_1}{\epsilon_1A_1}}
+\]
+Da cui la resistenza superficiale all'irraggiamento è $\frac{1-\epsilon_1}{\epsilon_1A_1}$.
+
+\begin{align*}
+    \dot{Q}_{1,2} &= A_1F_{1\sra 2}J_1 - A_2F_{2\sra 1}J_2 = A_1F_{1\sra 2}(J_1-J_2) \\
+        &= \frac{J_1-J_2}{\frac{1}{A_1F_{1\sra 2}}}
+\end{align*}
+
+Combinando le varie resistenze (ma \textbf{non} quelle di tipo conduttivo/convettivo!):
+\[
+    \dot{Q}_{1,2} = \frac{ E_1^n - E_2^n }{ \frac{1-\epsilon_1}{\epsilon_1A_1} + \frac{1}{A_1F_{1\sra 2}} + \frac{1-\epsilon_2}{\epsilon_2A_2} }
+\]
+
+\textbf{Superfici piane parallele indefinite nera-grigia}\\
+\begin{align*}
+    \dot{Q}_{1,2} &= \frac{ E_1^n - E_2^n }{ 0 + \frac{1}{A} + \frac{1-\epsilon_2}{\epsilon_2A} } = A\epsilon_2\sigma_0(T_1^4 - T_2^4)
+\end{align*}
+
+\textbf{Superfici piane parallele indefinite grigia-grigia}\\
+\begin{align*}
+    \dot{Q}_{1,2} &= \frac{ E_1^n - E_2^n }{ \frac{1-\epsilon_1}{\epsilon_1A} + \frac{1}{A} + \frac{1-\epsilon_2}{\epsilon_2A} } =
+    \frac{A\sigma_0(T_1^4 - T_2^4)}{ \frac{1}{\epsilon_1} + \frac{1}{\epsilon_2} - 1 }
+\end{align*}
+
+\textbf{Corpo grigio in una cavità con superfici grigie}\\
+\[
+    \dot{Q}_{1,2} = \frac{ \sigma_0(T_1^4 - T_2^4) }{ \frac{1-\epsilon_1}{\epsilon_1A_1} + \frac{1}{A_1} + \frac{1-\epsilon_2}{\epsilon_2A_2} }
+\]
