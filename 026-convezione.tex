@@ -187,18 +187,29 @@ Può essere interpretato come il rapporto fra le forze di galleggiamento ed il q
 \subsubsection{Numero di Rayleigh}
 \[ \Ray = \Gra \cdot \Pra = \frac{g \beta \Delta T D^3}{a \nu} \]
 
-\subsection{Convezione naturale}
-\subsubsection{Parete piana verticale}
-\begin{tabular}{ll}
-    $\Nus_{L} = 0.59 \Ray^{0.25}$ & moto laminare $\Ray < 10^9$\\
-    $\Nus_{L} = 0.10 \Ray^{0.33}$ & moto turbolento $\Ray > 10^9$\\
-\end{tabular}\\
-Le proprietà termofisiche sono valutate alla temperatura di film.
+\subsubsection{Alcune correlazioni}
 
-\subsubsection{Cilindro indefinito orizzontale}
-Relazione Churchill-Chu, valida per $10^{-5} < \Ray < 10^{12}$
-\[ \Nus_{D} =
-\qty{0.60 + \frac{0.387 \Ray^{\frac{1}{6}}}
-    {\qty[1 + \qty(\frac{0.559}{\Pra})^{\frac{9}{16}}]^{\frac{8}{27}}}
-}^2 \]
-Le proprietà termofisiche sono valutate alla temperatura di film.
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    Geometria & $D$ & $\Ray$ & $\Nus$ \\
+    \hline
+    \multicolumn{4}{l}{Piastra} \\
+    \hline
+    Vert. altezza $L$ & $L$ & \numrange{e4}{e9} & $0.59 \Ray^{1/4}$ \\
+     & & \numrange{e9}{e13} & $0.1 \Ray^{1/3}$ \\
+    \hline
+    Oriz. sopra calda & $\frac{A}{p}$ & \numrange{e4}{e7} & $0.54 \Ray^{1/4}$ \\
+     & & \numrange{e7}{e11} & $0.15 \Ray^{1/3}$ \\
+    \hline
+    Oriz. sotto calda & $\frac{A}{p}$ & \numrange{e5}{e11} & $0.27 \Ray^{1/4}$ \\
+    \hline
+    \multicolumn{4}{l}{Cilindro} \\
+    \hline
+    Vert. alto L, diam D & $L$ & \multicolumn{2}{c|}{Come piast. vert. }\\
+     & & \multicolumn{2}{c|}{quando $D \ge \frac{35L}{\Gra^{1/4}}$} \\
+    \hline
+    Oriz. diam D & $D$ & \numrange{e5}{e12} & $X$ \\
+    \hline
+\end{tabular}
+
+Dove $p$ è il perimetro della piastra, \textbf{tutte le temperature} si riferiscono a $T_{\text{film}}$ e $X = \qty{0.60 + \frac{0.387 \Ray^{\frac{1}{6}}}{\qty[1 + \qty(\frac{0.559}{\Pra})^{\frac{9}{16}}]^{\frac{8}{27}}}}^2$.

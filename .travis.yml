@@ -5,7 +5,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y --no-install-recommends texlive-full latexmk
 script:
-  - latexmk -pdf -xelatex -interaction=nonstopmode fisica-tecnica.tex || true
+  - latexmk -pdf -f fisica-tecnica.tex || true
 before_deploy:
   - git config --local user.name "Travis Builder"
   - git config --local user.email "travis@travis.com"
