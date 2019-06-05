@@ -112,13 +112,22 @@ Nota come $T_m$ non è costante ma dipende dalla distanza dall'ingresso del tubo
 \textbf{Temperatura superficiale costante}\\
 \[ \ln(\frac{T_s - T_u}{T_s - T_i}) = - \frac{h A}{\dot{m} c_p} \]
 Ma anche
-\[ \dot{Q} = h \cdot A \cdot \Delta T_{ln} \qq{con} \Delta T_{ln} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
+\[ \dot{Q} = h \cdot A \cdot \Delta T_{ml} \qq{con} \Delta T_{ml} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
+
+\textbf{Caduta di pressione}\\
+\[ \Delta P = f \cdot \frac{L}{D} \cdot \frac{\rho w_m^2}{2} \]
+Dove $f$ è il \emph{fattore d'attrito}.
+\[ \qq*{Potenza pompaggio} \dot{L}_p = \frac{\dot{m} \Delta P}{\rho} = w_m A_t \Delta P \]
 
 \subsection{Convezione forzata}
 \[ \Nus = A \cdot \Rey^\alpha \cdot \Pra^\beta \]
 I parametri $\Rey$ e $\Pra$ vanno valutati alla giusta temperatura (che può essere di parete, asintotica, di film, di miscelamento adiabatico).
 
 \subsubsection{Moto all'interno di un condotto circolare}
+\begin{align*}
+    f = \frac{64}{\Rey} & \quad \text{se laminare} \\
+    f = 0.184 \Rey^{-0.2} & \quad \text{se turbolento}\\
+\end{align*}
 \begin{tabular}{ll}
     \toprule
     $\Nus_{D} = 3.66$ & laminare con $T_p = \text{cost}$ \\
