@@ -98,21 +98,23 @@ La temperatura media si ricava dal principio di conservazione dell'energia.
 \[ \dot{E} = \dot{m} c_p T_m = \int_{\dot{m}} c_p T \partial \dot{m} = \int_{A_t} c_p T \qty(\rho w \dd{A_t}) \]
 
 \textbf{Condizioni al contorno}\\
+Siano $T_s$ la temperatura superficiale del tubo, $A_s$ l'area superficiale del tubo, $T_m$ temperatura media del fluido di una certa sezione del tubo.
 \[ T_s = \text{cost} \qq{oppure} \dot{q} = \text{cost} \]
 Le due condizioni non possono essere contemporaneamente presenti.
 
 \textbf{Flusso di calore costante}\\
-\[ \dot{q}_s = \text{cost} \rightarrow \dot{Q}_s = \dot{q}_s \cdot A = \dot{m} c_p \qty(T_u - T_i) \]
+\[ \dot{q}_s = \text{cost} \rightarrow \dot{Q}_s = \dot{q}_s \cdot A_s = \dot{m} c_p \qty(T_u - T_i) \]
 Da cui deriva 
-\[ T_u = T_i + \frac{\dot{q}_s A}{\dot{m} c_p} \]
+\[ T_u = T_i + \frac{\dot{q}_s A_s}{\dot{m} c_p} \]
 Ma essendo $\dot{q}_s = h \qty(T_s - T_m)$
 \[ T_s = T_m + \frac{\dot{q}_s}{h} \]
 Nota come $T_m$ non è costante ma dipende dalla distanza dall'ingresso del tubo e si può calcolare usando l'equazione precedente che lega $T_u$ a $T_i$, considerando solo parte del tubo.
+La differenza $(T_s - T_m)$ resta invece costante.
 
 \textbf{Temperatura superficiale costante}\\
-\[ \ln(\frac{T_s - T_u}{T_s - T_i}) = - \frac{h A}{\dot{m} c_p} \]
+\[ \ln(\frac{T_s - T_u}{T_s - T_i}) = - \frac{h A_s}{\dot{m} c_p} \]
 Ma anche
-\[ \dot{Q} = h \cdot A \cdot \Delta T_{ml} \qq{con} \Delta T_{ml} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
+\[ \dot{Q} = h \cdot A_s \cdot \Delta T_{ml} \qq{con} \Delta T_{ml} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
 
 \textbf{Caduta di pressione}\\
 \[ \Delta P = f \cdot \frac{L}{D} \cdot \frac{\rho w_m^2}{2} \]
