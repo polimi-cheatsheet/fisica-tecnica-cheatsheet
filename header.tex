@@ -31,19 +31,14 @@
 \usepackage{booktabs}
 \usepackage{stmaryrd}
 \usepackage{chemformula}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
 % Ranges of numbers
 \sisetup{range-phrase=--}
 
-% This sets page margins to .5 inch if using letter paper, and to 1cm
-% if using A4 paper. (This probably isn't strictly necessary.)
-% If using another size paper, use default 1cm margins.
-\ifthenelse{\lengthtest { \paperwidth = 11in}}
-{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
-{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-}
+% Page margins
+\geometry{top=.5in,left=.5in,right=.5in,bottom=.5in,headsep=0in}
 
 % Turn off header and footer
 \pagestyle{empty}
@@ -99,3 +94,10 @@
 		\addplot[black] {gauss(0,0.6)};
 	\end{axis}
 }
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhead[R]{Pagina \thepage{} di \pageref{LastPage}}
+\fancyhead[L]{}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{0pt}
