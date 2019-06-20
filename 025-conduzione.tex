@@ -47,13 +47,16 @@ Ponendo come condizione $\pdv{T}{r} = 0$ per $r = 0$ e $T = T_2$ per $r = R$ si 
 Ponendo $T = T_i$ per $r = R_i$ e $T = T_e$ per $r = R_e$ si ottiene
 \[T = T_i + \frac{T_e - T_i}{\ln(\frac{R_e}{R_i})}\ln(\frac{r}{R_i}) \qquad \dot{q}_{\text{areico}} = k \frac{T_i-T_e}{\ln(\frac{R_e}{R_i})}\frac{1}{r}\]
 \[\dot{q}_{\text{per unità di lunghezza}} = \frac{2\pi k}{\ln(\frac{R_e}{R_i})}\qty(T_i - T_e) \]
-\[\qq*{Ponendo} R_{cil} = \frac{\ln(\frac{R_e}{R_i})}{2\pi L k} \qq{si ha che} \dot{Q} = -\frac{\Delta T}{R_{cil}}\]
+\[\qq*{Ponendo} R_{cil} = \frac{\ln(\frac{R_e}{R_i})}{2\pi L k} \qq{si ha che} \dot{Q} = \frac{T_i-T_e}{R_{cil}}\]
 
 \subsection{Coordinate sferiche}
-\[ \pdv[2]{T}{r} + \frac{2}{r}\pdv{T}{r} + \frac{1}{r^2}\pdv[2]{T}{\theta} + \frac{\cot(\theta)}{r^2}\pdv{T}{\theta} + \frac{1}{r^2 \sin^2(\theta)}\pdv[2]{T}{\varphi} + \frac{\sigma}{k} = \frac{\rho c_v}{k} \pdv{T}{t} \]
+\begin{align*}
+    & \pdv[2]{T}{r} + \frac{2}{r}\pdv{T}{r} + \frac{1}{r^2}\pdv[2]{T}{\theta} + \frac{\cot(\theta)}{r^2}\pdv{T}{\theta} + \frac{1}{r^2 \sin^2(\theta)}\pdv[2]{T}{\varphi} + \frac{\sigma}{k} =\\
+    & = \frac{\rho c_v}{k} \pdv{T}{t}
+\end{align*}
 
 \textbf{Sfera piena o cava}\\
 Supponendo $T = T(r)$ e regime stazionario si ha che
 \[ T = -\frac{\sigma}{6k}r^2 + \frac{A}{r} + B \]
 Analogamente al caso cilindrico si ha che:
-\[ R_{sfera} = \frac{R_2 - R_1}{4\pi R_1 R_2 k} \qquad \dot{Q} = -\frac{\Delta T}{R_{sfera}} \]
+\[ R_{sfera} = \frac{R_2 - R_1}{4\pi R_1 R_2 k} \qquad \dot{Q} = \frac{T_i-T_e}{R_{sfera}} \]
