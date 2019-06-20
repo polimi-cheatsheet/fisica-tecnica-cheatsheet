@@ -53,13 +53,13 @@ Il fattore di vista tra la superficie $i$ e la superficie $j$ si indica $F_{i\sr
     $F_{i\sra j} = 1$ & $j$ circonda completamente $i$.
 \end{tabular}
 
-\textbf{Regola di reciprocità}\\
+\subsubsection{Regola di reciprocità}
 $F_{i\sra j} = F_{j\sra i}$ solo se le aree delle superfici sono uguali:
 \[
     A_iF_{i\sra j} = A_jF_{j\sra i}
 \]
 
-\textbf{Regola della somma}\\
+\subsubsection{Regola della somma}
 Tutta la radiazione emessa da $i$ in una cavità deve essere intercettata dalle superfici di $j$.
 \[
     \sum_{j=1}^n F_{i\sra j} = 1
@@ -84,7 +84,7 @@ Tutta la radiazione emessa da $i$ in una cavità deve essere intercettata dalle 
 
 \subsection{Scambio termico tra superfici}
 
-\textbf{Superfici nere}\\
+\subsubsection{Superfici nere}
 \[
     J_1 = E^n_1 = \sigma_0T_1^4 \qquad J_2 = E^n_2 = \sigma_0T_2^4
 \]
@@ -95,12 +95,12 @@ Tutta la radiazione emessa da $i$ in una cavità deve essere intercettata dalle 
 
 Resistenza spaziale alla radiazione: $\frac{1}{A_1F_{1\sra 2}}$.
 
-\textbf{Superfici piane parallele, indefinite, nere}\\
+\subsubsection{Superfici piane parallele, indefinite, nere}
 \[
     F_{1\sra 2} = 1 \quad \Rightarrow \quad \dot{Q}_{1,2} = A_1\sigma_0(T_1^4 - T_2^4)
 \]
 
-\textbf{Corpo nero in una cavità con superfici nere}\\
+\subsubsection{Corpo nero in una cavità con superfici nere}
 Il corpo intero è 1, il corpo attorno è 2.
 \[
     F_{1\sra 2} = 1 \quad \Rightarrow \quad \dot{Q}_{1,2} = A_1\sigma_0(T_1^4 - T_2^4)
@@ -115,7 +115,7 @@ Deve $I_i$ è la radiazione incidente su $i$, $\rho_i I_i$ è la radiazione rifl
 
 La potenza termica netta uscente è $\dot{Q} = A_i(J_i-I_i)$.
 
-\textbf{Superfici grigie}\\
+\subsubsection{Superfici grigie}
 \[
     \dot{Q}_1 = \dot{Q}_{1,2} = A_1(J_1-I_1) = A_1\left(J_1-\frac{J_1-\epsilon_1E_1^n}{1-\epsilon_1}\right)
 \]
@@ -134,18 +134,18 @@ Combinando le varie resistenze (ma \textbf{non} quelle di tipo conduttivo/convet
     \dot{Q}_{1,2} = \frac{ E_1^n - E_2^n }{ \frac{1-\epsilon_1}{\epsilon_1A_1} + \frac{1}{A_1F_{1\sra 2}} + \frac{1-\epsilon_2}{\epsilon_2A_2} }
 \]
 
-\textbf{Superfici piane parallele indefinite nera-grigia}\\
+\subsubsection{Superfici piane parallele indefinite nera-grigia}
 \begin{align*}
     \dot{Q}_{1,2} &= \frac{ E_1^n - E_2^n }{ 0 + \frac{1}{A} + \frac{1-\epsilon_2}{\epsilon_2A} } = A\epsilon_2\sigma_0(T_1^4 - T_2^4)
 \end{align*}
 
-\textbf{Superfici piane parallele indefinite grigia-grigia}\\
+\subsubsection{Superfici piane parallele indefinite grigia-grigia}
 \begin{align*}
     \dot{Q}_{1,2} &= \frac{ E_1^n - E_2^n }{ \frac{1-\epsilon_1}{\epsilon_1A} + \frac{1}{A} + \frac{1-\epsilon_2}{\epsilon_2A} } =
     \frac{A\sigma_0(T_1^4 - T_2^4)}{ \frac{1}{\epsilon_1} + \frac{1}{\epsilon_2} - 1 }
 \end{align*}
 
-\textbf{Corpo grigio in una cavità con superfici grigie}\\
+\subsubsection{Corpo grigio in una cavità con superfici grigie}
 \[
     \dot{Q}_{1,2} = \frac{ \sigma_0(T_1^4 - T_2^4) }{ \frac{1-\epsilon_1}{\epsilon_1A_1} + \frac{1}{A_1} + \frac{1-\epsilon_2}{\epsilon_2A_2} }
 \]

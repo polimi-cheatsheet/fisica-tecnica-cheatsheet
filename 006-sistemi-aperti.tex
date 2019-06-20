@@ -1,18 +1,20 @@
 \section{Sistemi aperti}
+
 \subsection{Bilancio di massa}
 \[ \dv{m}{t} = \sum_i \dot{m}_i^\sla \]
-\textbf{Equazione di continuità} \\
+
+\subsubsection{Equazione di continuità}
 \[ \dot{m} = \rho w \Omega \]
 
 \subsection{Bilancio di energia}
 \[ \dv{E}{t} = \sum_i \dot{E}_i^\sla \]
 dove $E$ rappresenta l'energia associata al trasporto di massa e al lavoro e calore scambiato
 
-\textbf{Lavoro di pulsione} \\
+\subsubsection{Lavoro di pulsione}
 \[ L_P^\sla = - \int^{V}_{V+V_m} P\dd{V} = PV_m = m_i P v_i \]
-\textbf{Energia associata al trasporto di massa} \\
+\subsubsection{Energia associata al trasporto di massa}
 \[ E_m = \sum_i m_i^\sla \qty(u + gz + \frac{w^2}{2}) \]
-\textbf{Bilancio energetico} \\
+\subsubsection{Bilancio energetico}
 \[ \dv{E}{t} = \sum_i \dot{m}_i^\sla \qty(h + gz + \frac{w^2}{2}) + \dot{Q}^\sla - \dot{L_e}^\sra\]
 
 \subsection{Bilancio di entropia}
@@ -26,27 +28,27 @@ dove $E$ rappresenta l'energia associata al trasporto di massa e al lavoro e cal
 \[ \dot{m}^\sla (s_i - s_u) + \dot{S}_{Q^\sla} + \dot{S}_{irr} = 0 \]
 
 \section{Macchina aperta}
-\textbf{Turbina, compressore e pompa}
+\subsubsection{Turbina, compressore e pompa}
 \[ \dot{m}^\sla (h_i - h_u) - \dot{L}_e^\sra = 0 \]
 \[ \dot{m}^\sla (s_i - s_u) + \dot{S}_{irr} = 0 \]
 
-\textbf{Scambiatore di calore}
+\subsubsection{Scambiatore di calore}
 \[ \dot{m}^\sla (h_i - h_u) + \dot{Q}^\sla = 0 \]
 \[ \dot{m}^\sla (s_i - s_u) + \dot{S}_{Q^\sla} + \dot{S}_{irr} = 0 \]
 
-\textbf{Diffusore (w↓) e ugello (w↑)}
+\subsubsection{Diffusore (w↓) e ugello (w↑)}
 \[  (h_i - h_u) + \frac{(w_i^2 - w_u^2)}{2} = 0 \]
 \[ \dot{m}^\sla (s_i - s_u) + \dot{S}_{irr} = 0 \]
 
-\textbf{Valvola di laminazione}
+\subsubsection{Valvola di laminazione}
 \[  (h_i - h_u) = 0 \]
 \[ \dot{m}^\sla (s_i - s_u) + \dot{S}_{irr} = 0 \]
 
 \subsection{Rendimento isoentropico}
-\textbf{Turbina}
+\subsubsection{Turbina}
 \[ \eta_{is,turbina} = \frac{\dot{L}_{reale}^\sra}{\dot{L}_{ideale}^\sra} = \frac{h_1 - h_{2,reale}}{h_1 - h_{2,ideale}} \]
 
-\textbf{Compressore}
+\subsubsection{Compressore}
 \[ \eta_{is,compressore} = \frac{\dot{L}_{ideale}^\sra}{\dot{L}_{reale}^\sra} = \frac{h_1 - h_{2,ideale}}{h_1 - h_{2,reale}} \]
 
 \subsection{Lavoro specifico per unità di massa fluente}

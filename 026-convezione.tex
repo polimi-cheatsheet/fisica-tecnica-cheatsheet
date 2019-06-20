@@ -58,7 +58,7 @@ Può essere interpretato come rapporto tra potenza termica scambiata per convezi
 \[ \Rey = \frac{\rho w D}{\mu} \qty( = \frac{F_{inerzia}}{F_{viscose}})\] 
 Può essere interpretato come rapporto tra la risultante delle forze di inerzia e la risultante delle forze viscose.
 
-\textbf{Valori tipici di Reynolds}\\
+\subsubsection{Valori tipici di Reynolds}
 \textit{Moto in un condotto:}\\
 \phantom{→}$\put(3,2){\line(0,1){5}}\to$ laminare se $\Rey < 2000$, turbolento se $\Rey > 2500$\\
 \textit{Moto lungo lastra piana:}\\
@@ -70,7 +70,7 @@ Può essere interpretato come rapporto tra la risultante delle forze di inerzia 
 \[ \Pra = \frac{c_p \mu}{k} \]
 Si ottiene dividendo $\nu = \frac{\mu}{\rho}$ (viscosità cinematica, $\nu$) per $a = \frac{k}{\rho c_p}$ (diffusività termica, $a$).
 
-\textbf{Valori tipici di Prandtl}\\
+\subsubsection{Valori tipici di Prandtl}
 \begin{tabular}{p{3cm}r}
     \toprule
     gas ideali & $0.7$\\
@@ -80,29 +80,29 @@ Si ottiene dividendo $\nu = \frac{\mu}{\rho}$ (viscosità cinematica, $\nu$) per
 \end{tabular}\\
 
 \subsection{Temperature di valutazione dei parametri}
-\textbf{Corpo immerso}\\
+\subsubsection{Corpo immerso}
 \[ T_{film} = \frac{T_p + T_\infty}{2} \qq{oppure} T_{\text{asintotica}} = T_\infty \]
-\textbf{Convenzione forzata in condotto}\\
+\subsubsection{Convenzione forzata in condotto}
 \[ \qq*{Temp. di miscelamento adiabatico} T_f = \frac{\int_A \rho w c_p T \dd{A}}{\int_A \rho w c_p \dd{A}} \]
 
 \subsection{Flusso all'interno di tubi}
 In ogni sezione $w$ varia da un valore pari a zero sulla parete fino ad un valore massimo sull'asse del tubo.
 In ogni sezione $T$ varia da un valore sulla parete fino ad un valore maggiore (o inferiore) sull'asse del tubo, a seconda se il processo sia di riscaldamento o raffreddamento.
 
-\textbf{Velocità media}\\
+\subsubsection{Velocità media}
 La velocità media si ricava dal principio di conservazione della massa.
 \[ w_m = \frac{\dot{m}}{\rho A_t} \qq{con} A_t = \pi \frac{D^2}{4} \]
 
-\textbf{Temperatura media}\\
+\subsubsection{Temperatura media}
 La temperatura media si ricava dal principio di conservazione dell'energia.
 \[ \dot{E} = \dot{m} c_p T_m = \int_{\dot{m}} c_p T \partial \dot{m} = \int_{A_t} c_p T \qty(\rho w \dd{A_t}) \]
 
-\textbf{Condizioni al contorno}\\
+\subsubsection{Condizioni al contorno}
 Siano $T_s$ la temperatura superficiale del tubo, $A_s$ l'area superficiale del tubo, $T_m$ temperatura media del fluido di una certa sezione del tubo.
 \[ T_s = \text{cost} \qq{oppure} \dot{q} = \text{cost} \]
 Le due condizioni non possono essere contemporaneamente presenti.
 
-\textbf{Flusso di calore costante}\\
+\subsubsection{Flusso di calore costante}
 \[ \dot{q}_s = \text{cost} \rightarrow \dot{Q}_s = \dot{q}_s \cdot A_s = \dot{m} c_p \qty(T_u - T_i) \]
 Da cui deriva 
 \[ T_u = T_i + \frac{\dot{q}_s A_s}{\dot{m} c_p} \]
@@ -111,12 +111,12 @@ Ma essendo $\dot{q}_s = h \qty(T_s - T_m)$
 Nota come $T_m$ non è costante ma dipende dalla distanza dall'ingresso del tubo e si può calcolare usando l'equazione precedente che lega $T_u$ a $T_i$, considerando solo parte del tubo.
 La differenza $(T_s - T_m)$ resta invece costante.
 
-\textbf{Temperatura superficiale costante}\\
+\subsubsection{Temperatura superficiale costante}
 \[ \ln(\frac{T_s - T_u}{T_s - T_i}) = - \frac{h A_s}{\dot{m} c_p} \]
 Ma anche
 \[ \dot{Q} = h \cdot A_s \cdot \Delta T_{ml} \qq{con} \Delta T_{ml} = - \frac{T_u - T_i}{\ln(\frac{T_s - T_u}{T_s - T_i})} \]
 
-\textbf{Caduta di pressione}\\
+\subsubsection{Caduta di pressione}
 \[ \Delta P = f \cdot \frac{L}{D} \cdot \frac{\rho w_m^2}{2} \]
 Dove $f$ è il \emph{fattore d'attrito}.
 \[ \qq*{Potenza pompaggio} \dot{L}_p = \frac{\dot{m} \Delta P}{\rho} = w_m A_t \Delta P \]
@@ -177,7 +177,7 @@ $\Nus_{L} = 0.664 \Rey^{0.5} \Pra^{\frac{1}{3}}$ & laminare $\Rey < 5\cdot10^5$\
 \subsubsection{Numero di Grashof}
 \[  \Gra = \frac{\rho^2 g \beta \Delta T D^3}{\mu^2} \]
 Può essere interpretato come il rapporto fra le forze di galleggiamento ed il quadrato della risultante delle forze viscose.
-\textbf{Moto lungo superficie verticale}\\
+\subsubsection{Moto lungo superficie verticale}
 \begin{align*}
     \Gra_{L} < 10^9 & \quad \text{moto laminare} \\
     \Gra_{L} > 10^9 & \quad \text{moto turbolento} \\
